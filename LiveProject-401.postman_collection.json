@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "15d13ce8-27bf-480f-b972-574cbde09677",
+		"name": "LiveProject-401",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "abcd1234#",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "john@email.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"testUsr02Fn\",\r\n    \"lastName\": \"testUsr02Ln\",\r\n    \"email\": \"testUsr02@email.com\",\r\n    \"age\": 50,\r\n    \"phone\": \"123456789\",\r\n    \"role\": \"REPORTEE\",\r\n    \"password\": \"testUsr02@Pwd\",\r\n    \"managerName\": \"testMgr01@email.com\",\r\n    \"address\": \"testUsr02Addr\",\r\n    \"tag\": \"REPORTEE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/v1/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users"
+					]
+				},
+				"description": "Request to create a new User"
+			},
+			"response": []
+		}
+	]
+}
